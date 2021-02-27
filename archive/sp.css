@@ -1,0 +1,180 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 1300px) {
+	
+
+header {
+	background: #FFFFFF;
+	width: 100%;
+	height: 100px;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#global_nav_wrapper {
+	width: 100%;
+	z-index: 20;
+	background: #FFFFFF;
+	position: absolute;
+	top: 100px;
+	left: 0;
+	height: 0;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+.global_nav {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	position: static;
+}
+
+.global_sub_nav {
+	position: static;
+	visibility: visible;
+	width: 100%;
+	background: #FFFFFF;
+	height: 0;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+.global_nav_link {
+	color: #000000;
+	display: block;
+	width: 100%;
+	height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	margin: 0;
+	padding: 15px 0;
+	text-decoration: none;
+	transition: background 0.3s;
+	font-size: 24px;
+	position: static;
+	background: #FFFFFF;
+}
+
+#header_account {
+	background: #FFFFFF;
+	position: static;
+}
+
+#global_nav {
+	position: static;
+	transition: 0.5s;
+}
+
+#header_account_wrapper {
+	position: absolute;
+}
+
+#header_account_nav {
+	visibility: visible;
+	display: none;
+}
+
+#header_account_nav_logout {
+	text-align: center;
+}
+
+#header_logo {
+	height: 100px;
+	width: auto;
+}
+
+#header_logo_wrapper {
+	width: 100%;
+	text-align: center;
+}
+
+h1 {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#wrapper {
+	min-height: calc(100% - 150px);
+}
+
+#bread_crumb {
+	width: calc(100% - 30px);
+}
+
+#main_content {
+	width: calc(100% - 30px);
+}
+
+#sp_nav_wrapper {
+	display: block;
+	position: absolute;
+	top: 38px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+}
+
+#sp_nav_button,
+#sp_nav_button::before,
+#sp_nav_button::after {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 5px;
+	background: #000000;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+footer {
+	display: block;
+	height: 40px;
+	font-size: 14px;
+}
+
+#footer_menu {
+	display: none;
+}
+
+#footer_copyright {
+	padding: 10px 0;
+	text-align: center;
+}
+
+#sp_nav_button {
+	position: relative;
+	margin: 5px 0;
+}
+
+#sp_nav_button::before,
+#sp_nav_button::after {
+	position: absolute;
+}
+
+#sp_nav_button::before {
+	top: 10px;
+}
+
+#sp_nav_button::after {
+	bottom: 10px;
+}
+
+.sp_nav_button_active {
+	background: transparent!important;
+}
+
+.sp_nav_button_active::after{
+	top: 0!important;
+	transform: rotate(-45deg);
+}
+
+.sp_nav_button_active::before {
+	top: 0!important;
+	transform: rotate(45deg);
+}

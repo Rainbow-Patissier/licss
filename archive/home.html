@@ -1,0 +1,463 @@
+<!doctype html>
+<html>
+	<head>
+		<meta content="学校図書館に特化した図書管理システムLiCSS-無料で利用ができるかつ高性能なWebアプリケーションです。" name="description">
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>LiCSS</title>
+		<!--Icon-->
+		<link rel="shortcut icon" href="img/icon.ico">
+		<!--Style Sheet-->
+		<link rel="stylesheet" href="data/css/normalize.css">
+		<link rel="stylesheet" href="data/css/style.css">
+		<link rel="stylesheet" href="data/css/sp.css">
+		<!--JavaScript-->
+		<script src="data/js/main.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://kit.fontawesome.com/6c585d1429.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<div id="header_logo_wrapper">
+				<h1>
+					<a href="">
+						<img src="img/logo.jpg" alt="LiCSS" title="LiCSS" id="header_logo">
+					</a>
+				</h1>
+			</div>
+			<nav id="global_nav_wrapper">
+				<ul id="global_nav">
+					<li class="global_nav" id="global_manage">
+						<a href="javascript:void(0)" class="global_nav_link" onClick="header_global_menu_display(this,'');">
+							管理業務
+						</a>
+						<ul class="global_sub_nav">
+							<li>
+								<span class="global_sub_nav_head">
+									設定
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											学校設定
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											貸出冊数・返却期限設定
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											基本設定
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											その他設定
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="global_sub_nav_head">
+									蔵書管理
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											登録
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											一覧
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											図書ラベル・背ラベル
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											蔵書点検
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											購入依頼
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="global_sub_nav_head">
+									雑誌管理
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											登録
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											一覧
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="global_sub_nav_head">
+									利用者管理
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											登録
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											一覧
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											利用者ラベル
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											利用者別集計
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											年度更新
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											感想文管理
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="global_sub_nav_head">
+									その他
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											台帳
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											統計
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											図書館からのお知らせ
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											図書館だより
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="global_nav" id="global_counter">
+						<a href="javascript:void(0)" class="global_nav_link" onClick="header_global_menu_display(this,'');">
+							窓口業務
+						</a>
+						<ul class="global_sub_nav">
+							<li>
+								<span class="global_sub_nav_head">
+									図書
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											貸出・返却
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											予約
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											蔵書検索
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="global_sub_nav_head">
+									その他
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											予約一覧
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											貸出中図書一覧
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											図書返却請求
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="global_nav" id="global_store">
+						<a href="javascript:void(0)" class="global_nav_link" onClick="header_global_menu_display(this,'');">
+							書店連携
+						</a>
+						<ul class="global_sub_nav">
+							<li>
+								<span class="global_sub_nav_head">
+									発注
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											発注
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											履歴
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="global_sub_nav_head">
+									受入
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											受入
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											履歴
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="global_nav" id="global_foruser">
+						<a href="javascript:void(0)" class="global_nav_link" onClick="header_global_menu_display(this,'');">
+							利用者機能
+						</a>
+						<ul class="global_sub_nav">
+							<li>
+								<span class="global_sub_nav_head">
+									利用者情報
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											内容確認
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											登録内容変更
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="global_sub_nav_head">
+									図書
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											蔵書検索
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											予約
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											利用状況
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="global_sub_nav_head">
+									感想文
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											登録
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											一覧
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="global_sub_nav_head">
+									図書購入依頼
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											登録
+										</a>
+									</li>
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											一覧
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="global_nav" id="global_account">
+						<a href="javascript:void(0)" class="global_nav_link" onClick="header_global_menu_display(this,'');">
+							池田悠真さん，ようこそ
+						</a>
+						<ul class="global_sub_nav">
+							<li>
+								<span class="global_sub_nav_head">
+									運営からのお知らせ
+								</span>
+								<ul class="global_sub_sub_nav">
+									<li>
+										<a href="" class="global_sub_sub_nav_link">
+											システム開始
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="">ログアウト</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<div id="header_account_wrapper">
+				<!--<span id="header_account" onClick="header_account_display()">
+					池田悠真
+					<ul id="header_account_nav">
+						<li>
+							<span id="header_account_nav_head">
+								運営からのお知らせ
+							</span>
+							<ul class="no_maru">
+								<li>
+									<a href="">
+										システム運用開始
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="" id="header_account_nav_logout">
+								ログアウト
+							</a>
+						</li>
+					</ul>
+				</span>-->
+			</div>
+			<div id="sp_nav_wrapper">
+				<span id="sp_nav_button" onClick="sp_global_menu_display();"></span>
+			</div>
+		</header>
+		<section id="wrapper">
+			<nav id="bread_crumb">
+				breadcrumb
+			</nav>
+			<section id="main_content">
+				maincontent
+			</section>
+		</section>
+		<div id="to_pagetop"><i class="fas fa-angle-double-up"></i></div>
+		<footer>
+			<nav id="footer_menu">
+				<ul class="inline">
+					<li>
+						<a href="">
+							利用規約
+						</a>
+					</li>
+					<li>
+						<a href="">
+							プライバシーポリシー
+						</a>
+					</li>
+					<li>
+						<a href="">
+							マニュアル
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<section id="footer_copyright">
+				Copyright &copy; 2020 <a href="">LiCSS</a> ALL Rights Reserved.
+			</section>
+		</footer>
+	</body>
+	<script>
+		$(function(){
+		  $('a[href^="#"]').click(function(){
+			var speed = 500;
+			var href= $(this).attr("href");
+			var target = $(href == "#" || href == "" ? 'html' : href);
+			var position = target.offset().top;
+			$("html, body").animate({scrollTop:position}, speed, "swing");
+			return false;
+		  });
+		});
+		$(document).ready(function() {
+			var offset = 100;
+			var duration = 500;
+			$(window).scroll(function() {
+				if ($(this).scrollTop() > offset) {
+					$('#to_pagetop').fadeIn(duration);
+				} else {
+					$('#to_pagetop').fadeOut(duration);
+				}
+			});
+			$('#to_pagetop').click(function(event) {
+				event.preventDefault();
+				$('html, body').animate({scrollTop: 0}, duration);
+				return false;
+			})
+		});
+	</script>
+</html>
