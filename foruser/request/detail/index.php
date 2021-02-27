@@ -1,0 +1,109 @@
+<?php
+include_once('../../../data/link.php');
+if(isset($_GET['i'])){
+	$id=(int)SQL::decrypt_k($_GET['i']);
+	if($id!==0 && $data=SQL::fetch("SELECT book_name,isbn,DATE_FORMAT(edit_date,'%Y/%m/%e %h:%i:%s') as date,request_condition,note,result_note FROM {$school_id}_manage_books_request WHERE cond=0 AND request_id=?",array($id))){
+		$title="図書購入依頼詳細";
+		$request_condition=array('未確認','承諾','却下');
+	}else{
+		$id=0;
+		$title="エラーが発生";
+	}
+}else{
+	$id=0;
+	$title="エラーが発生";
+}
+include_once('../../../data/header.php');
+?>
+<nav id="bread_crumb">
+	<ul id="bread_crumb_list">
+		<li>
+			<a href="<?=$url;?>foruser/">
+				利用者機能
+			</a>
+		</li>
+		<li>
+			<a href="<?=$url;?>foruser/request/">
+				図書購入依頼
+			</a>
+		</li>
+		<li>
+			<a href="<?=$request_url;?>">
+				<?=$title;?>
+			</a>
+		</li>
+	</ul>
+</nav>
+<section id="main_content"><?php
+	if($id!==0){
+		?>
+	<table>
+		<tbody>
+			<tr>
+				<th>
+					図書名
+				</th>
+				<td>
+					<?=ALL::h($data['book_name']);?>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					ISBN
+				</th>
+				<td>
+					<?=ALL::h($data['isbn']);?>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					備考
+				</th>
+				<td>
+					<?=ALL::h($data['note']);?>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					依頼日時
+				</th>
+				<td>
+					<?=ALL::h($data['date']);?>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					状態
+				</th>
+				<td>
+					<?=$request_condition[$data['request_condition']];?>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					審査備考
+				</th>
+				<td>
+					<?=ALL::h($data['result_note']);?>
+				</td>
+			</tr>
+		</tbody>
+	</table><?php
+	}else{
+		?>
+	<div>
+		<h2>
+			エラーが発生
+		</h2>
+		<p>
+			予期せぬエラーが発生しました。
+		</p>
+		<p>
+			恐れ入りますが，はじめからやり直してください。
+		</p>
+	</div><?php
+	}
+	?>
+</section><?php
+include_once('../../../data/footer.php');
+?>
