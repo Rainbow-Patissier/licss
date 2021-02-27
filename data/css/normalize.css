@@ -1,0 +1,299 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	background: #EBEBEB;
+}
+
+a,
+a:visited {
+	color: #166EE4;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table th,
+table td {
+	border: 1px #000000 solid;
+	background: #FFFFFF;
+}
+
+table tr:nth-child(even) th,
+table tr:nth-child(even) td {
+	background: #B3B3B3;
+}
+
+table tr:hover th,
+table tr:hover td {
+	background: #909090;
+}
+
+h2{
+	width: calc(100% - 50px);
+	font-size: 24px;
+	margin: 5px 0;
+	padding: 10px 15px;
+	background: #E8E8E8;
+}
+h3{
+	width: calc(100% - 65px);
+	font-size: 22px;
+	margin: 5px 0;
+	padding: 9px 13px;
+	border: 1px #E0E0E0 solid;
+	border-left: 15px #E0E0E0 solid;
+	
+}
+h4{
+	font-size: 20px;
+	margin: 5px 0;
+	padding: 9px 30px;
+	border-bottom: 1.5px #E0E0E0 solid;
+}
+h5{
+	font-size: 18px;
+	margin: 5px 0;
+	padding: 9px 33px;
+	border-bottom: 1px #E0E0E0 solid;
+}
+h6{
+	font-size: 16px;
+	margin: 5px 0;
+	padding: 9px 36px;
+	border-bottom: 1px #E0E0E0 solid;
+}
+input{
+	border: 0.5px #A4A4A4 solid;
+	padding: 7px;
+	margin: 5px;
+	border-radius: 5px;
+	font-size: 16px;
+}
+input[type="checkbox"]{
+	border: 0.5px #A4A4A4 solid;
+	padding: 7px;
+	margin: 5px;
+	border-radius: 5px;
+	font-size: 16px;
+}
+input[type="email"]{
+	width: 300px;
+}
+input[type="checkbox"]+label{
+	font-size: 16px;
+}
+select{
+	border: 0.5px #A4A4A4 solid;
+	padding: 7px;
+	margin: 5px;
+	border-radius: 5px;
+	font-size: 16px;
+}
+select:focus{
+	border: 0.5px #2D80FF solid;
+}
+option[label="選択してください"],
+option[label="選択"]{
+	display: none;
+}
+textarea{
+	font-size: 16px;
+	border-radius: 5px;
+	width: 80%;
+	height: 100px;
+	margin: 10px 0;
+}
+button{
+	font-size: 16px;
+	margin: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.form_style>dt {
+	background: #D4D4D4;
+	margin: 10px 0;
+	padding: 10px 15px;
+	font-size: 19px;
+}
+
+iframe {
+	border: 0;
+	display: block;
+}
+
+/*エディタ関連*/
+hr {
+	margin: 10px auto;
+	width: 95%;
+}
+.editor_textarea {
+	display: none;
+}
+
+.quote_wrapper {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.quote_area {
+	margin: 5px 0;
+	padding: 15px 20px;
+	background: #EBEBEB;
+}
+
+.quote_caption_area {
+	width: 100%;
+	text-align: center;
+	color:#717171;
+}
+
+.code_area {
+	width: calc(95% - 20px);
+	margin: 5px auto;
+	padding: 10px;
+	background: #000000;
+	color: #FFFFFF;
+}
+
+.warning_area {
+	margin: 15px 0;
+	padding: 10px 15px;
+	width: calc(100% - 40px);
+	border-radius: 5px;
+	background: #F9FF1E;
+	box-shadow: 5px 5px 2px 5px rgba(0,0,0,0.4);
+	overflow: auto;
+}
+
+.warning_title_area {
+	font-size: 22px;
+	color: #AE0002;
+	font-weight: bold;
+}
+/*ファイルドラッグアンドドロップ*/
+#file_area{
+	text-align: center;
+	border: 1px #A6ABB6 dashed;
+	border-radius: 3px;
+	font-size: 12pt;
+	width: 600px;
+	padding: 30px 15px;
+	margin: 10px;
+}
+#file_area>input{
+	border: 0;
+}
+/*リストなし*/
+.no_maru,
+.no_maru>li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+/*inline*/
+.inline,
+.inline>li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+/*スクロール*/
+.scroll{
+	overflow: auto;
+}
+.xscroll{
+	overflow-x: auto;
+}
+.yscroll{
+	overflow-y: auto;
+}
+/*上へボタン*/
+.pagetop {
+	color: #fff;
+	background-color: rgba(0,0,0,0.3);
+	text-decoration: none;
+	display: none;
+	position: fixed;
+	bottom: 120px;
+	right: 30px;
+	font-size: 1.5rem;
+	width: 3.3rem;
+	height: 3.3rem;
+	line-height: 3.3rem;
+	border-radius: 3.3rem;
+	text-align: center;
+	cursor: pointer;
+	transition: background 0.5s;
+}
+
+.pagetop:hover {
+	color: #fff !important;
+	background-color: #33FFE6;
+	text-decoration: none;
+}
+/*フッタースタイル*/
+footer{
+	color: #666666;
+}
+footer a,
+footer a:visited{
+	color: #666666;
+	text-decoration: none;
+}
+footer a:hover{
+	text-decoration: underline;
+}
+/*上へボタン*/
+#to_pagetop {
+	color: #fff;
+	background-color: rgba(0,0,0,0.3);
+	text-decoration: none;
+	display: none;
+	position: fixed;
+	bottom: 55px;
+	right: 25px;
+	font-size: 1.5rem;
+	width: 3.3rem;
+	height: 3.3rem;
+	line-height: 3.3rem;
+	border-radius: 3.3rem;
+	text-align: center;
+	cursor: pointer;
+	transition: background 0.5s;
+}
+
+#to_pagetop:hover {
+	color: #fff !important;
+	background-color: #33FFE6;
+	text-decoration: none;
+}
+/*フォントに関する設定*/
+.red {
+	color: red;
+}
+.two_columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}

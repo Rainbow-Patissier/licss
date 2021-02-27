@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+印刷ラベル
+バーコードラベル
+エーワン　品番：31516
+https://www.a-one.co.jp/product/search/detail.php?id=31516
+背ラベル
+エーワン　品番：31269
+https://www.a-one.co.jp/product/search/detail.php?id=31269
+*/
+@page{
+	size: A4;
+}
+html{
+	width: 210mm;
+	height: 297mm;
+	margin: 0;
+	padding: 0;
+}
+body{
+	margin: 0;
+	padding: 0;
+	width: calc(100% - 17.6mm);
+	background: #FFFFFF;
+}
+header,
+#bread_crumb,
+.no_print,
+#to_pagetop,
+#announce_wrapper,
+#announce_back,
+footer{
+	display: none;
+	visibility: hidden;
+}
+#main_content{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.manage_books_label_row_margin{
+	height: 8.8mm;
+	break-before: page;
+}
+	
+.manage_user_label_margin{
+	height: 17.6mm;
+	break-before: page;
+}
+.manage_books_back_label_row_margin{
+	height: 10.92mm;
+	break-before: page;
+}
+table{
+	width: 100%;
+}
